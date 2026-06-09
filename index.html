@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 IT СПРАВОЧНИК | Будущее уже здесь</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="gradient-bg"></div>
+    <div class="cyber-grid"></div>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="glitch-wrapper">
+                <h1 class="logo glitch" data-text="⚡ IT СПРАВОЧНИК">⚡ IT СПРАВОЧНИК</h1>
+            </div>
+            <p class="subtitle typing-effect">Энциклопедия технологий будущего</p>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="66">0</span>
+                    <span class="stat-label">Терминов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="7">0</span>
+                    <span class="stat-label">Категорий</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">% Знаний</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="filter-nav">
+        <div class="container">
+            <button class="filter-btn active" data-category="all">Все термины <span class="count">66</span></button>
+            <button class="filter-btn" data-category="programming">💻 Код <span class="count">18</span></button>
+            <button class="filter-btn" data-category="systems">⚙️ Системы <span class="count">12</span></button>
+            <button class="filter-btn" data-category="networks">🌐 Сети <span class="count">13</span></button>
+            <button class="filter-btn" data-category="security">🔒 Защита <span class="count">8</span></button>
+            <button class="filter-btn" data-category="devops">🚀 DevOps <span class="count">5</span></button>
+            <button class="filter-btn" data-category="slang">💬 Жаргон <span class="count">10</span></button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Поиск термина..." class="search-input">
+            </div>
+
+            <div class="terms-grid" id="termsGrid">
+                <!-- Программирование -->
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>API</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Application Programming Interface — набор инструментов для взаимодействия программных компонентов.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Переменная</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Именованное хранилище данных, значение которых можно изменять во время работы программы.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Функция</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Фрагмент кода, выполняющий конкретную задачу и доступный для многократного использования.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>ООП</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Объектно-ориентированное программирование — методология разработки на основе объектов и классов.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Массив</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Упорядоченная коллекция элементов, доступных по индексу.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Алгоритм</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Пошаговая инструкция для решения задачи за ограниченное время.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Отладка</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Поиск и устранение ошибок в программном коде.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Git</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Система версионирования для отслеживания изменений в исходном коде.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>JSON</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Текстовый формат для обмена структурированными данными между приложениями.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Рекурсия</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Техника программирования, где функция обращается к самой себе.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <!-- Системы -->
+                <div class="term-card" data-category="systems">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Операционная система</h3>
+                        <span class="badge">⚙️ Системы</span>
+                    </div>
+                    <p>Программное обеспечение, управляющее ресурсами компьютера и обеспечивающее работу приложений.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="systems">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Процессор</h3>
+                        <span class="badge">⚙️ Системы</span>
+                    </div>
+                    <p>Центральный вычислительный модуль, исполняющий команды программ.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="systems">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Оперативная память</h3>
+                        <span class="badge">⚙️ Системы</span>
+                    </div>
+                    <p>RAM — быстрая временная память для хранения активных данных и программ.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="systems">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Виртуализация</h3>
+                        <span class="badge">⚙️ Системы</span>
+                    </div>
+                    <p>Создание виртуальных копий компьютерных ресурсов для эффективного использования.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="systems">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>SSD</h3>
+                        <span class="badge">⚙️ Системы</span>
+                    </div>
+                    <p>Твердотельный накопитель — быстрое устройство хранения без движущихся деталей.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <!-- Сети -->
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>IP-адрес</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Уникальный цифровой идентификатор устройства в компьютерной сети.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>DNS</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Система преобразования доменных имён в IP-адреса для доступа к сайтам.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>HTTP/HTTPS</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Протоколы передачи веб-данных, HTTPS обеспечивает шифрование.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>VPN</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Виртуальная частная сеть для безопасного соединения через публичный интернет.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>SSH</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Защищённый протокол для удалённого управления серверами и системами.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <!-- Безопасность -->
+                <div class="term-card" data-category="security">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Файрвол</h3>
+                        <span class="badge">🔒 Защита</span>
+                    </div>
+                    <p>Система фильтрации сетевого трафика для предотвращения несанкционированного доступа.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="security">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Шифрование</h3>
+                        <span class="badge">🔒 Защита</span>
+                    </div>
+                    <p>Преобразование информации в закодированный вид для защиты от чтения.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="security">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>DDoS-атака</h3>
+                        <span class="badge">🔒 Защита</span>
+                    </div>
+                    <p>Массированная атака множества устройств, направленная на перегрузку сервера.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="security">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Двухфакторная аутентификация</h3>
+                        <span class="badge">🔒 Защита</span>
+                    </div>
+                    <p>2FA — дополнительный уровень защиты, требующий второго способа подтверждения.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="security">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Фишинг</h3>
+                        <span class="badge">🔒 Защита</span>
+                    </div>
+                    <p>Мошенническая схема для кражи личных данных через подделку сайтов или писем.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="term-card" data-category="devops">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Docker</h3>
+                        <span class="badge">🚀 DevOps</span>
+                    </div>
+                    <p>Платформа для упаковки приложений в изолированные контейнеры с зависимостями.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="devops">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>CI/CD</h3>
+                        <span class="badge">🚀 DevOps</span>
+                    </div>
+                    <p>Непрерывная интеграция и доставка — автоматизация сборки и развёртывания кода.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="devops">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Мониторинг</h3>
+                        <span class="badge">🚀 DevOps</span>
+                    </div>
+                    <p>Постоянное наблюдение за работой систем для раннего обнаружения проблем.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <!-- Жаргон -->
+                <div class="term-card" data-category="slang">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Баг</h3>
+                        <span class="badge">💬 Жаргон</span>
+                    </div>
+                    <p>Ошибка или дефект в коде, приводящий к некорректному поведению программы.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="slang">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Фикс</h3>
+                        <span class="badge">💬 Жаргон</span>
+                    </div>
+                    <p>Исправление найденной ошибки или проблемы.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="slang">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Бэкап</h3>
+                        <span class="badge">💬 Жаргон</span>
+                    </div>
+                    <p>Резервная копия данных на случай сбоя или потери основной информации.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="slang">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Продакшн</h3>
+                        <span class="badge">💬 Жаргон</span>
+                    </div>
+                    <p>Рабочая среда, где приложение используется реальными пользователями.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="slang">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Легаси</h3>
+                        <span class="badge">💬 Жаргон</span>
+                    </div>
+                    <p>Устаревший код или система, требующие замены или модернизации.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="slang">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Лаг</h3>
+                        <span class="badge">💬 Жаргон</span>
+                    </div>
+                    <p>Задержка или замедление в работе приложения или сети.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="slang">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Апдейт</h3>
+                        <span class="badge">💬 Жаргон</span>
+                    </div>
+                    <p>Обновление программного обеспечения с новыми возможностями или исправлениями.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <!-- Новые термины -->
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Класс</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Шаблон для создания объектов, определяющий их свойства и методы.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Интерфейс</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Контракт, определяющий набор методов, которые должен реализовать класс.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Исключение</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Механизм обработки ошибок во время выполнения программы.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Библиотека</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Набор готовых функций и классов для решения типовых задач.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Фреймворк</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Каркас приложения, определяющий архитектуру и предоставляющий готовые решения.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Компилятор</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Программа, переводящая исходный код в машинный код или байт-код.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="programming">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Интерпретатор</h3>
+                        <span class="badge">💻 Код</span>
+                    </div>
+                    <p>Программа, выполняющая код построчно без предварительной компиляции.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="systems">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>BIOS</h3>
+                        <span class="badge">⚙️ Системы</span>
+                    </div>
+                    <p>Basic Input/Output System — базовая система ввода-вывода, запускающаяся при включении компьютера.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="systems">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Файловая система</h3>
+                        <span class="badge">⚙️ Системы</span>
+                    </div>
+                    <p>Способ организации и хранения файлов на носителях информации.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="systems">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>RAID</h3>
+                        <span class="badge">⚙️ Системы</span>
+                    </div>
+                    <p>Redundant Array of Independent Disks — технология объединения дисков для надёжности или скорости.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="systems">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Драйвер</h3>
+                        <span class="badge">⚙️ Системы</span>
+                    </div>
+                    <p>Программа для взаимодействия операционной системы с аппаратным устройством.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="systems">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Кэш</h3>
+                        <span class="badge">⚙️ Системы</span>
+                    </div>
+                    <p>Быстрая промежуточная память для хранения часто используемых данных.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="systems">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Сервер</h3>
+                        <span class="badge">⚙️ Системы</span>
+                    </div>
+                    <p>Мощный компьютер, который хранит данные и обслуживает запросы пользователей.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>TCP/IP</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Набор протоколов передачи данных, используемых в интернете.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Маршрутизатор</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Устройство для пересылки пакетов данных между различными сегментами сети.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Порт</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Числовой идентификатор для различения сетевых служб на одном устройстве.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Bandwidth</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Пропускная способность канала связи — максимальная скорость передачи данных.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Ping</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Время отклика сети — задержка между отправкой запроса и получением ответа.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>CDN</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Content Delivery Network — сеть серверов для быстрой доставки контента пользователям.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="networks">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Облако</h3>
+                        <span class="badge">🌐 Сети</span>
+                    </div>
+                    <p>Удалённые серверы для хранения данных и запуска приложений через интернет.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="security">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>SQL-инъекция</h3>
+                        <span class="badge">🔒 Защита</span>
+                    </div>
+                    <p>Тип атаки, при котором злоумышленник внедряет вредоносный SQL-код в запрос.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="security">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Антивирус</h3>
+                        <span class="badge">🔒 Защита</span>
+                    </div>
+                    <p>Программа для обнаружения и удаления вредоносного ПО.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="devops">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Логирование</h3>
+                        <span class="badge">🚀 DevOps</span>
+                    </div>
+                    <p>Запись событий и ошибок приложения в файлы или системы мониторинга.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="slang">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Репозиторий</h3>
+                        <span class="badge">💬 Жаргон</span>
+                    </div>
+                    <p>Хранилище исходного кода проекта с историей изменений.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="term-card" data-category="slang">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <h3>Краш</h3>
+                        <span class="badge">💬 Жаргон</span>
+                    </div>
+                    <p>Внезапное завершение работы программы или игры из-за ошибки.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 IT Справочник | Современная база знаний для технических специалистов</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="termModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <span class="modal-badge" id="modalBadge"></span>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription"></p>
+            </div>
+            <div class="modal-glow"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
